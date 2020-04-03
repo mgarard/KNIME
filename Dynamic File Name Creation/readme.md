@@ -25,7 +25,9 @@ Below is a basic construction of generating a dynamic file name using a column v
 
 The example takes a file and splits the 'bin' column into sets of 'bin1' & 'bin2'.  The 'Table Column to Variable' node defines which column to sample.  The 'Table Column to Variable' samples 'row0'.  In the multi-bin example, you'll see that the index needs to be reset to use the same node without modification because of the 'row0' sampling.  The 'Variable Expression' joins the varibles into the final expression variable, names it 'dynamicFileName' and that is fed to the file writer as a variable input.  Within file writer, the file name is set to 'dynamicFileName' variable.
 
-//add one col image here
+![fromColumnOneBin](https://github.com/mgarard/Knime/blob/master/Dynamic%20File%20Name%20Creation/fromColumnOneBin.svg)
+
+[Download Workflow](https://github.com/mgarard/Knime/blob/master/Dynamic%20File%20Name%20Creation/fromColumnOneBin.knwf)
 
 #### Row Fed
 Similarly, below is a basic construction of generating a dynamic file name using a row value as a variable.  The column variable addition is left out of the simple example but is added back in for the advanced examples to show how it would combine with the column example.
