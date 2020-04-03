@@ -34,7 +34,9 @@ Similarly, below is a basic construction of generating a dynamic file name using
 
 Similarly, the 'Table Row to Variable' node defines with row to sample.  The limitation is one row unless you make muliple splits but this issue seen in the multi-column example and is futher addressed in the advanced multi-row example. The 'Table Column to Variable' samples a single row, 'row0' of the file path 'Table Creator'.  The 'Variable Expression' and file writer are set similarly to the first example.
 
-//add one row image here
+![fromRowSinglePathWOVar](https://github.com/mgarard/Knime/blob/master/Dynamic%20File%20Name%20Creation/fromRowSinglePathWOVar.svg)
+
+[Download Workflow](https://github.com/mgarard/Knime/blob/master/Dynamic%20File%20Name%20Creation/fromRowSinglePathWOVar.knwf)
 
 ### Multi-Variable Example
 
@@ -42,9 +44,9 @@ Similarly, the 'Table Row to Variable' node defines with row to sample.  The lim
 
 Below, the 'Table Column to Variable' and 'Variable Expression' were converted to a 'meta-node' and copied for expansion.  As mentioned earlier, the index needs to be reset in the table split to accommodate the default of 'Row0' sampling.
 
-//add one row image here
+![fromColumnMultiBin](https://github.com/mgarard/Knime/blob/master/Dynamic%20File%20Name%20Creation/fromColumnMultiBin.svg)
 
-
+[Download Workflow](https://github.com/mgarard/Knime/blob/master/Dynamic%20File%20Name%20Creation/fromColumnMultiBin.knwf)
 
 #### Row Fed: Advanced With Loop
 
@@ -52,12 +54,17 @@ Below is an example of processing data and wanting to save different versions.  
 
 To read all the variables in the file table, the 'Table Row To Variable Loop Start' is inserted between the 'Table Column to Variable' and the 'Varible Expression'.  The file table is fed into it and the 'Variable Loop End' collates the new variables created by the 'Variable Expressions'.  The resulting table is parsed by dropping uneeded columns which could be done much sooner and then the rows are split, converted to variables by 'Table Row to Variable' and fed to the file writer as in the first example.
 
-//add one row image here
+![fromRowMultiPathWVar](https://github.com/mgarard/Knime/blob/master/Dynamic%20File%20Name%20Creation/fromRowMultiPathWVarLoop.svg)
+
+[Download Workflow](https://github.com/mgarard/Knime/blob/master/Dynamic%20File%20Name%20Creation/fromRowMultiPathWVar.knwf)
+
 
 ### Simplify View For Expansion
 
 The above can get very messy if you're tyring to incorporate it into a larger work flow so the Dynamic Naming and Filtering is collected into meta-nodes.
 
-//add one row image here
+![fromRowMultiPathWVarMeta](https://github.com/mgarard/Knime/blob/master/Dynamic%20File%20Name%20Creation/fromRowMultiPathWVarMeta.svg)
+
+[Download Workflow](https://github.com/mgarard/Knime/blob/master/Dynamic%20File%20Name%20Creation/fromRowMultiPathWVarMeta.knwf)
 
 # WORK IN PROGRESS
