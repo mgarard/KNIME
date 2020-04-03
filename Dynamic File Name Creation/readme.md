@@ -1,4 +1,4 @@
-# Dynamic File Name Creation
+# Dynamic File Name Creation in KNIME
 
 Often, one may decide to split the data in some way and wish to save the results separately such as Bin_1, Bin_2,... And then you may want to do this on multple sets of data.  Changing every variable becomes challenging and you may accidently overwrite data.  The goal of this is to simplify.  
 
