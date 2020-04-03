@@ -1,6 +1,4 @@
 # Knime
-Knime
-# Project Title
 
 This is a repository for sharing solutions that I’ve devise where I found it difficult to find good examples for what I needed.
 
