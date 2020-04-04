@@ -13,27 +13,30 @@ Download the ones you wish to use or alter and change the necessary variables an
 
 ## Clustering
 
-This example uses a slice of data of ‘small molecule-activity for kinase research’ from [(Sharma R, Schürer SC and Muskal SM. Dataset 1 in: High quality, small molecule-activity datasets for kinase research. F1000Research 2016, 5(Chem Inf Sci):1366](https://doi.org/10.5256/f1000research.8950.d124591)).  You may see more of this data in later uploads.
+This example uses a slice of data ([PIK3CA_IC50_short](https://github.com/mgarard/KNIME/blob/master/Chemistry/Clustering%20Chemical%20Libraries/PIK3CA_IC50_short.csv)) of ‘small molecule-activity for kinase research’ from [(Sharma R, Schürer SC and Muskal SM. Dataset 1 in: High quality, small molecule-activity datasets for kinase research. F1000Research 2016, 5(Chem Inf Sci):1366](https://doi.org/10.5256/f1000research.8950.d124591)).  You may see more of this data in later uploads.
 
-The process tarts with loading the file and using a modified version of my [Dynamic File Name Creation]( https://github.com/mgarard/KNIME/tree/master/Dynamic%20File%20Name%20Creation).  Opening the file requires the ‘smiles’ variable to be set since it’s stored as a ‘string’.  Once loaded, the data is converted into a RDKIT object with the ‘RDKit From Molecule’.  This node requires a ‘molecule object’ which can be from a SD, SDF, mol, smiles, etc.
-One aspect that I often see missed is the stripping of salts which is done with the ‘RDKit Salt Stripper’. We don’t want an oxalate salt to ruin a comparison to another molecule. Then the fingerprint is generated with the RDKit Fingerprint.  This has various options within it but if it does not have the fingerprint you want. You may chose to generated it elsewhere, save it as a string in a file and when it’s imported, the datatype can be set to ‘bit vector’ on the load.
+The process tarts with loading the file and using a modified version of my [Dynamic File Name Creation]( https://github.com/mgarard/KNIME/tree/master/Dynamic%20File%20Name%20Creation).  Opening the file requires the ‘smiles’ data type to be set since it’s stored as a ‘string’.  Once loaded, the data is converted into a RDKIT object with the ‘RDKit From Molecule’.  This node requires a ‘molecule object’ which can be from a SD, SDF, mol, smiles, etc.
+
+One aspect that I often see missed is the stripping of salts which is done with the ‘RDKit Salt Stripper’. We don’t want an oxalate salt to ruin a comparison to another molecule. Then the fingerprint is generated with the RDKit Fingerprint.  This has various options within it but if it does not have the fingerprint you want. You may chose to generate it elsewhere, save it as a string in a file and when it’s imported, the datatype can be set to ‘bit vector’ on the load.
 
 Once you have the fingerprint data, it’s goes to ‘Distance Matrix Calculation’.  This has several options such as Euclidean, Manhattan, Cosine...  In this case, I’ve selected ‘Tanimoto’.  I convert the molecule back to smiles for saving later and then the distance calculations are fed into the ‘k-Medoids’.
 
 In ‘k-Medoids’, you can set the number of desired clusters, chunk size and constrain the number of iterations if you wish.  The top return port returns the data with each molecule binned to the row number of the center molecule for the cluster.  The bottom port returns the center molecule row number with a list of distances to other molecules in the cluster and number of molecules in the cluster.
 
-Then the data is saved from various points to capture the flow.
-// insert image
+Then the data is saved from various points to capture the flow.  The result that I obtained are included.
+
+![Clustering Chemical Libraries](https://github.com/mgarard/KNIME/blob/master/Chemistry/Clustering%20Chemical%20Libraries/library_clustering.svg)
+[Download Workflow](https://github.com/mgarard/KNIME/blob/master/Chemistry/Clustering%20Chemical%20Libraries/library_clustering.knwf)
 
 ## Taking it futher
 
 1.	Clusters can be clustered.  Why is that important?  (see reading)
-A.	Maybe you clustered a set down to 5 clusters and that did not represent your data well.  Perhaps getting a diverse set from one cluster would help represent that cluster better than the center.
-B.	Maybe you want to screen more of your library against a target and want to know where to start.  You can add a known active to a set and see what cluster it falls into.  Start the screening there.
-2.	Finger prints can be combined.  Do you know which fingerprint is best?
-a.	One effort has been to combine fingerprints
-b.	Clusters may differ between fingerprints
-c.	Do the zeros matter?  Hempel’s Raven has an answer.  (see reading) PCA can be use to find the elements of the fingerprint which is most important.
+    A.	Maybe you clustered a set down to 5 clusters and that did not represent your data well and getting a larger diverse sets from cluster would help represent that library better than the cluster centers.  For example, from one cluster, you could find 5 more most diverse molecules within that cluster.
+    B.	Maybe you want to screen more of your library against a target and want to know where to start.  You can add a known active to a set and see what cluster it falls into.  The cluster that contains the known active might give you the best results.
+2.	Fingerprints can be combined.  Do you know which fingerprint is best?
+    a.	One strategy has been to combine fingerprints
+    b.	Clusters may differ between fingerprints
+    c.	Do the zeros matter?  Hempel’s Raven has an answer.  (see reading) PCA can be use to find the elements of the fingerprint which is most important.
 
 
 ## Reading
