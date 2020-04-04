@@ -33,7 +33,7 @@ Then the data is saved from various points to capture the flow.  The result that
 ## Taking it futher
 
 1.	Clusters can be clustered.  Why is that important?  (see reading)
-    1.	Maybe you clustered a set down to 5 clusters and that did not represent your data well and getting a larger diverse sets from cluster would help represent that library better than the cluster centers.  For example, from one cluster, you could find 5 more most diverse molecules within that cluster.
+    1.	Maybe you clustered a set down to 5 clusters and that did not represent your data well and getting a larger diverse set from the clusters would help represent that library better than the cluster centers alone.  For example, from one cluster, you could find 5 more most diverse molecules within that cluster to represent it rather than just the center.
     2.	Maybe you want to screen more of your library against a target and want to know where to start.  You can add a known active to a set and see what cluster it falls into.  The cluster that contains the known active might give you the best results.
 2.	Fingerprints can be combined.  Do you know which fingerprint is best?
     1.	One strategy has been to combine fingerprints
