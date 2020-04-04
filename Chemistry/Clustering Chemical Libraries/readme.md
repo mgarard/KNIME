@@ -19,7 +19,7 @@ The process starts by loading the file and using a modified version of my [Dynam
 
 One aspect that I often see missed is the stripping of salts which is done with the ‘RDKit Salt Stripper’. We don’t want an oxalate salt to ruin a comparison to another molecule. Then the fingerprint is generated with the RDKit Fingerprint.  This has various options within it but if it does not have the fingerprint you want. You may chose to generate it elsewhere, save it as a string in a file and when it’s imported, the datatype can be set to ‘bit vector’ on the load.
 
-Once you have the fingerprint data, it’s goes to ‘Distance Matrix Calculation’.  This has several options such as Euclidean, Manhattan, Cosine...  In this case, I’ve selected ‘Tanimoto’.  I convert the molecule back to smiles for saving later and then the distance calculations are fed into the ‘k-Medoids’.
+Once you have the fingerprint data, it’s goes to ‘Distance Matrix Calculation’.  This has several options such as Euclidean, Manhattan, Cosine...  In this case, I’ve selected ‘Tanimoto’.  I convert the molecule back to smiles ( as a string data type ) for saving later and then the distance calculations are fed into the ‘k-Medoids’.
 
 In ‘k-Medoids’, you can set the number of desired clusters, chunk size and constrain the number of iterations if you wish.  The top return port returns the data with each molecule binned to the row number of the center molecule for the cluster.  The bottom port returns the center molecule row number with a list of distances to other molecules in the cluster and number of molecules in the cluster.
 
