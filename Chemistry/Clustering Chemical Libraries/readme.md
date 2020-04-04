@@ -3,7 +3,7 @@
 ## Motivation
 Chemical Libraries grow large very quickly.  When looking for new chemical matter, it's necessary to compare your current libraries to new matter which is typically done by comparing similarity with the Tanimoto Coefficient.  By doing this, one can find chemical matter that is different from your current library; but is close enough in similarity that it may potentially provide active lead for known targets.
 
-At best, the job can be split but can still take a very long time.  One solution often sought is to look for a smaller set that represents your current stock for use in the Tanimoto based similarity search.  The basic idea used is a using some clustering algorithm such as K-Means.  Several bioinformatics companies offer out of the box solutions which advertise being able to do millions of compounds such as Daylight or ChemAxon’s ‘MadFast Similarity Search’ with multi-threaded implementation and in-memory storage.
+At best, the job can be split but can still take a very long time.  One solution often sought is to look for a smaller set that represents your current stock for use in the Tanimoto based similarity search.  The basic idea used is to employ a clustering algorithm such as K-Means.  Several bioinformatics companies offer out of the box solutions which advertise being able to do millions of compounds such as Daylight or ChemAxon’s ‘MadFast Similarity Search’ with multi-threaded implementation and in-memory storage.
 
 For those that don’t have access to expensive platforms, budget restricted or just learning, you can start with KNIME.
 
