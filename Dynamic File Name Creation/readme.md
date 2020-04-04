@@ -67,4 +67,3 @@ The above can get very messy if you're tyring to incorporate it into a larger wo
 
 [Download Workflow](https://github.com/mgarard/Knime/blob/master/Dynamic%20File%20Name%20Creation/fromRowMultiPathWVarMeta.knwf)
 
-# WORK IN PROGRESS
