@@ -23,7 +23,7 @@ Once you have the fingerprint data, it’s goes to ‘Distance Matrix Calculatio
 
 In ‘k-Medoids’, you can set the number of desired clusters, chunk size and constrain the number of iterations if you wish.  The top return port returns the data with each molecule binned to the row number of the center molecule for the cluster.  The bottom port returns the center molecule row number with a list of distances to other molecules in the cluster and number of molecules in the cluster.
 
-The weekness of k-Medoids is that it's limited to 65,500 molecules.  It makes short work of this number but libraries often exceed this number.  The data then needs to be row split and one can loop this process to collate the data later.
+The weekness of k-Medoids is that it's limited to 65,500 molecules.  It makes short work of this number but libraries often exceed this number.  The data then needs to be row split or partioned.  I like to use "Partioning" with random sampling at some percentage.  This may be able to be looped by placing a loop start before the partion, partioning by set number of rows and looping the second split back to aggregate the results.
 
 Then the data is saved from various points to capture the flow.  The result that I obtained are included.
 
