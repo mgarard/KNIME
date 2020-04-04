@@ -39,7 +39,7 @@ Then the data is saved from various points to capture the flow.  The result that
 2.	Fingerprints can be combined.  Do you know which fingerprint is best?
     1.	One strategy has been to combine fingerprints
     2.	Clusters may differ between fingerprints
-    3.	Do the zeros matter?  Hempel’s Ravens has an answer.  (see reading) PCA can be use to find the elements of the fingerprint which is most important.
+    3.	Do the zeros matter?  Hempel’s Ravens has an answer.  (see reading) PCA can be use to find the elements of the fingerprint which is most important.  By reducing the size of the fingerprint into a customized much smaller fingerprint, one can reduce the processing time.
 
 
 ## Reading
