@@ -37,7 +37,7 @@ Then the data is saved from various points to capture the flow.  The result that
     2.	Maybe you want to screen more of your library against a target and want to know where to start.  You can add a known active to a set and see what cluster it falls into.  The cluster that contains the known active might give you the best results.
     3. Perhaps, you could simply rerun the clustering multiple times to find many centers from random intiation events.  This may not work well if there is a clear separation within the library and you chose the best number of clusters to use.  You could end up with the same center or compounds very close to it.  Clustering clusters would bust this by finding the most diverse elements from your cluster center.
 
-2. Apply RDKit MCS to your clusters to isolate scaffolds.  
+2. Apply 'RDKit MCS' node to your clusters to isolate scaffolds.  
 
 3.	Fingerprints can be combined.  Do you know which fingerprint is best?
     1.	One strategy has been to combine fingerprints
