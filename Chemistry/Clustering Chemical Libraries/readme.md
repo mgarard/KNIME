@@ -30,13 +30,16 @@ Then the data is saved from various points to capture the flow.  The result that
 ![Clustering Chemical Libraries](https://github.com/mgarard/KNIME/blob/master/Chemistry/Clustering%20Chemical%20Libraries/library_clustering.svg)
 [Download Workflow](https://github.com/mgarard/KNIME/blob/master/Chemistry/Clustering%20Chemical%20Libraries/library_clustering.knwf)
 
-## Taking it futher
+## Taking it further
 
 1.	Clusters can be clustered.  Why is that important?  (see reading)
     1.	Maybe you clustered a set down to 5 clusters and that did not represent your data well and getting a larger diverse set from the clusters would help represent that library better than the cluster centers alone.  For example, from one cluster, you could find 5 more most diverse molecules within that cluster to represent it rather than just the center.
     2.	Maybe you want to screen more of your library against a target and want to know where to start.  You can add a known active to a set and see what cluster it falls into.  The cluster that contains the known active might give you the best results.
     3. Perhaps, you could simply rerun the clustering multiple times to find many centers from random intiation events.  This may not work well if there is a clear separation within the library and you chose the best number of clusters to use.  You could end up with the same center or compounds very close to it.  Clustering clusters would bust this by finding the most diverse elements from your cluster center.
-2.	Fingerprints can be combined.  Do you know which fingerprint is best?
+
+2. Apply RDKit MCS to your clusters to isolate scaffolds.  
+
+3.	Fingerprints can be combined.  Do you know which fingerprint is best?
     1.	One strategy has been to combine fingerprints
     2.	Clusters may differ between fingerprints
     3.	Do the zeros matter?  Hempel’s Ravens has an answer.  (see reading) PCA can be use to find the elements of the fingerprint which is most important.  By reducing the size of the fingerprint into a customized much smaller fingerprint, one can reduce the processing time.
