@@ -30,7 +30,7 @@ Then the data is saved from various points to capture the flow.  The result that
 ![Clustering Chemical Libraries](https://github.com/mgarard/KNIME/blob/master/Chemistry/Clustering%20Chemical%20Libraries/library_clustering.svg)
 [Download Workflow](https://github.com/mgarard/KNIME/blob/master/Chemistry/Clustering%20Chemical%20Libraries/library_clustering.knwf)
 
-## Taking it further
+## Taking It Further
 
 1.	Clusters can be clustered.  Why is that important?  (see reading)
     1.	Maybe you clustered a set down to 5 clusters and that did not represent your data well and getting a larger diverse set from the clusters would help represent that library better than the cluster centers alone.  For example, from one cluster, you could find 5 more most diverse molecules within that cluster to represent it rather than just the center.
