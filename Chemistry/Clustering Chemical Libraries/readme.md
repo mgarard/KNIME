@@ -32,7 +32,7 @@ Then the data is saved from various points to capture the flow.  The result that
 
 An alternative route which I like better:
 
-![Clustering Chemical Libraries Alt](https://github.com/mgarard/KNIME/blob/master/Chemistry/Clustering%20Chemical%20Libraries/library_clustering_alt.knwf)
+![Clustering Chemical Libraries Alt](https://github.com/mgarard/KNIME/blob/master/Chemistry/Clustering%20Chemical%20Libraries/Similarity_Clustering_alt.svg)
 [Download Workflow](https://github.com/mgarard/KNIME/blob/master/Chemistry/Clustering%20Chemical%20Libraries/library_clustering_alt.knwf)
 ## Taking It Further
 
