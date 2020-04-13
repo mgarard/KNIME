@@ -30,6 +30,10 @@ Then the data is saved from various points to capture the flow.  The result that
 ![Clustering Chemical Libraries](https://github.com/mgarard/KNIME/blob/master/Chemistry/Clustering%20Chemical%20Libraries/library_clustering.svg)
 [Download Workflow](https://github.com/mgarard/KNIME/blob/master/Chemistry/Clustering%20Chemical%20Libraries/library_clustering.knwf)
 
+An alternative route which I like better:
+
+![Clustering Chemical Libraries Alt](https://github.com/mgarard/KNIME/blob/master/Chemistry/Clustering%20Chemical%20Libraries/library_clustering_alt.knwf)
+[Download Workflow](https://github.com/mgarard/KNIME/blob/master/Chemistry/Clustering%20Chemical%20Libraries/library_clustering_alt.knwf)
 ## Taking It Further
 
 1.	Clusters can be clustered.  Why is that important?  (see reading)
