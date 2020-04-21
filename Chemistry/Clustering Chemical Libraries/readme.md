@@ -28,11 +28,13 @@ The weekness of k-Medoids is that it's limited to 65,500 molecules.  It makes sh
 Then the data is saved from various points to capture the flow.  The result that I obtained are included.
 
 ![Clustering Chemical Libraries](https://github.com/mgarard/KNIME/blob/master/Chemistry/Clustering%20Chemical%20Libraries/library_clustering.svg)
+
 [Download Workflow](https://github.com/mgarard/KNIME/blob/master/Chemistry/Clustering%20Chemical%20Libraries/library_clustering.knwf)
 
 An alternative route which I like better:
 
 ![Clustering Chemical Libraries Alt](https://github.com/mgarard/KNIME/blob/master/Chemistry/Clustering%20Chemical%20Libraries/Similarity_Clustering_alt.svg)
+
 [Download Workflow](https://github.com/mgarard/KNIME/blob/master/Chemistry/Clustering%20Chemical%20Libraries/library_clustering_alt.knwf)
 ## Taking It Further
 
