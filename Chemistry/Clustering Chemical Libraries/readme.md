@@ -53,4 +53,3 @@ An alternative route which I like better:
 [Database Clustering with a Combination of Fingerprints and Maximum Common Structure Methods]( https://pubs.acs.org/doi/abs/10.1021/ci050011h#)
 
 [Euclidean chemical spaces from molecular fingerprints: Hamming distance and Hempel's ravens.]( https://www.ncbi.nlm.nih.gov/pubmed/25475496)
-
